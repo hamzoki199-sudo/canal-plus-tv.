@@ -52,6 +52,12 @@ footer{text-align:center;padding:25px;color:#aaa}
 <p>Votre espace de découverte vous attend.</p>
 </main>
 <footer>Prototype indépendant — Contenus autorisés uniquement.</footer>
-</body>
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js");
+  });
+}
+</script></body>
 </html>
 
